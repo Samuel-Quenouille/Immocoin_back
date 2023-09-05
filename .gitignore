@@ -1,5 +1,3 @@
-.env
-
 /.bundle
 
 /log/*
@@ -18,3 +16,5 @@
 !/tmp/storage/.keep
 
 /config/master.key
+
+.env
