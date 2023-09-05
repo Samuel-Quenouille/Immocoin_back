@@ -1290,3 +1290,218 @@ Processing by PropertiesController#index as */*
 Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 875)
 
 
+Started GET "/properties" for ::1 at 2023-09-05 21:24:38 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (1.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 90ms (Views: 22.2ms | ActiveRecord: 28.3ms | Allocations: 37127)
+
+
+Started GET "/properties" for ::1 at 2023-09-05 21:24:38 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 877)
+
+
+Started POST "/users" for ::1 at 2023-09-05 21:24:53 +0200
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (5.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "sam@sam.fr"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-09-05 19:24:53.656658"], ["updated_at", "2023-09-05 19:24:53.656658"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 302ms (Views: 3.3ms | ActiveRecord: 11.6ms | Allocations: 21026)
+
+
+Started GET "/properties" for ::1 at 2023-09-05 21:24:57 +0200
+Started GET "/properties" for ::1 at 2023-09-05 21:24:57 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (10.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 247ms (Views: 235.7ms | ActiveRecord: 10.5ms | Allocations: 2268)
+
+
+  [1m[36mProperty Load (12.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 435ms (Views: 399.0ms | ActiveRecord: 35.9ms | Allocations: 5002)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users" for ::1 at 2023-09-05 21:28:04 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"quenouille_samuel@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"quenouille_samuel@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "quenouille_samuel@yahoo.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-09-05 19:28:05.079113"], ["updated_at", "2023-09-05 19:28:05.079113"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 274ms (Views: 0.4ms | ActiveRecord: 8.4ms | Allocations: 43146)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users" for ::1 at 2023-09-05 21:30:29 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"chloe@chloe.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"chloe@chloe.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "chloe@chloe.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-09-05 19:30:29.492166"], ["updated_at", "2023-09-05 19:30:29.492166"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 278ms (Views: 0.4ms | ActiveRecord: 6.0ms | Allocations: 43143)
+
+
+Started POST "/users" for ::1 at 2023-09-05 21:30:41 +0200
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"amandine@amandine.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"amandine@amandine.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "amandine@amandine.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-09-05 19:30:41.560065"], ["updated_at", "2023-09-05 19:30:41.560065"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 220ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 3117)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mProperty Load (1.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+Started POST "/properties" for ::1 at 2023-09-05 21:31:59 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"maison 45 m2", "price"=>"100000"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+  [1m[36mProperty Create (13.3ms)[0m  [1m[32mINSERT INTO "properties" ("title", "description", "price", "image", "city", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Maison"], ["description", "maison 45 m2"], ["price", "100000.0"], ["image", nil], ["city", nil], ["zip_code", nil], ["created_at", "2023-09-05 19:31:59.194213"], ["updated_at", "2023-09-05 19:31:59.194213"]]
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+Completed 201 Created in 60ms (Views: 0.6ms | ActiveRecord: 17.2ms | Allocations: 40825)
+
+
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+Started GET "/properties" for ::1 at 2023-09-05 21:48:46 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (1.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 47ms (Views: 17.2ms | ActiveRecord: 6.5ms | Allocations: 37263)
+
+
+Started GET "/properties" for ::1 at 2023-09-05 21:48:46 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 998)
+
+
+Started GET "/properties/undefined" for ::1 at 2023-09-05 21:48:48 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"undefined", "property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 404 Not Found in 10ms (ActiveRecord: 0.5ms | Allocations: 1493)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Property with 'id'=undefined):
+  
+app/controllers/properties_controller.rb:44:in `set_property'
+Started GET "/properties/undefined" for ::1 at 2023-09-05 21:48:48 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"undefined", "property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 557)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Property with 'id'=undefined):
+  
+app/controllers/properties_controller.rb:44:in `set_property'
+Started GET "/properties" for ::1 at 2023-09-05 21:48:49 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1009)
+
+
+Started GET "/properties" for ::1 at 2023-09-05 21:48:49 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (3.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 3.3ms | Allocations: 996)
+
+
+Started POST "/properties" for ::1 at 2023-09-05 21:49:42 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Villa", "description"=>"Villa 400 m2", "price"=>"1 000 000", "image"=>"", "zip_code"=>"06000", "city"=>"Nice", "user_id"=>"5"}}
+[31mUnpermitted parameter: :user_id. Context: { controller: PropertiesController, action: create, request: #<ActionDispatch::Request:0x00007fa4953349d8>, params: {"property"=>{"title"=>"Villa", "description"=>"Villa 400 m2", "price"=>"1 000 000", "image"=>"", "zip_code"=>"06000", "city"=>"Nice", "user_id"=>"5"}, "controller"=>"properties", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+  [1m[36mProperty Create (5.1ms)[0m  [1m[32mINSERT INTO "properties" ("title", "description", "price", "image", "city", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Villa"], ["description", "Villa 400 m2"], ["price", "1.0"], ["image", ""], ["city", "Nice"], ["zip_code", 6000], ["created_at", "2023-09-05 19:49:42.602171"], ["updated_at", "2023-09-05 19:49:42.602171"]]
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+Completed 201 Created in 19ms (Views: 0.8ms | ActiveRecord: 13.3ms | Allocations: 2668)
+
+
+Started GET "/properties" for ::1 at 2023-09-05 21:49:45 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 1131)
+
+
+Started GET "/properties" for ::1 at 2023-09-05 21:49:45 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (11.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 8.7ms | ActiveRecord: 11.2ms | Allocations: 1130)
+
+
+Started GET "/properties/undefined" for ::1 at 2023-09-05 21:49:52 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"undefined", "property"=>{}}
+  [1m[36mProperty Load (1.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 404 Not Found in 4ms (ActiveRecord: 1.4ms | Allocations: 545)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Property with 'id'=undefined):
+  
+app/controllers/properties_controller.rb:44:in `set_property'
+Started GET "/properties/undefined" for ::1 at 2023-09-05 21:49:52 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"undefined", "property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 557)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Property with 'id'=undefined):
+  
+app/controllers/properties_controller.rb:44:in `set_property'
+Started GET "/properties" for ::1 at 2023-09-05 21:49:54 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1129)
+
+
+Started GET "/properties" for ::1 at 2023-09-05 21:49:54 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1130)
+
+
