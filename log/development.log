@@ -4316,3 +4316,188 @@ Processing by PropertiesController#index as */*
 Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1130)
 
 
+  [1m[35m (116.2ms)[0m  [1m[35mCREATE DATABASE "immocoin_back_development" ENCODING = 'unicode'[0m
+  [1m[35m (38.9ms)[0m  [1m[35mCREATE DATABASE "immocoin_back_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6566015256337567590)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProperties (20230905144134)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "title" character varying, "description" text, "price" decimal, "image" character varying, "city" character varying, "zip_code" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230905144134"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20230905144727)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230905144727"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJwtDenylist (20230905144741)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "jwt_denylist" ("id" bigserial primary key, "jti" character varying NOT NULL, "exp" timestamp(6) NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_jwt_denylist_on_jti" ON "jwt_denylist" ("jti")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230905144741"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-06 10:10:03.703947"], ["updated_at", "2023-09-06 10:10:03.703947"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6566015256337567590)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+Started GET "/" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/amandinefernandes/.rvm/gems/ruby-3.0.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendering /Users/amandinefernandes/.rvm/gems/ruby-3.0.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/amandinefernandes/.rvm/gems/ruby-3.0.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 849)
+  Rendered /Users/amandinefernandes/.rvm/gems/ruby-3.0.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 778)
+Completed 200 OK in 16ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 10845)
+
+
+Completed 200 OK in 16ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 10835)
+
+
+Started GET "/apple-touch-icon-precomposed.png" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+Started GET "/apple-touch-icon-precomposed.png" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/apple-touch-icon-precomposed.png" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/amandinefernandes/.rvm/gems/ruby-3.0.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/amandinefernandes/.rvm/gems/ruby-3.0.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 456)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 1334)
+
+
+Started GET "/apple-touch-icon-precomposed.png" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/apple-touch-icon-precomposed.png" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  
+Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-09-06 15:40:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/properties" for ::1 at 2023-09-06 16:09:44 +0200
+Started GET "/properties" for ::1 at 2023-09-06 16:09:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PropertiesController#index as */*
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (1.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 3.5ms | Allocations: 20867)
+
+
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 19ms (Views: 8.1ms | ActiveRecord: 6.0ms | Allocations: 23669)
+
+
+Started POST "/properties" for ::1 at 2023-09-06 16:10:23 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"le manoir des Halliwell", "description"=>"bouuuh", "price"=>"4 000 000 000", "image"=>"", "zip_code"=>"13280", "city"=>"San Francisco", "user_id"=>""}}
+[31mUnpermitted parameter: :user_id. Context: { controller: PropertiesController, action: create, request: #<ActionDispatch::Request:0x0000000107012680>, params: {"property"=>{"title"=>"le manoir des Halliwell", "description"=>"bouuuh", "price"=>"4 000 000 000", "image"=>"", "zip_code"=>"13280", "city"=>"San Francisco", "user_id"=>""}, "controller"=>"properties", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 37ms (Views: 3.4ms | ActiveRecord: 6.0ms | Allocations: 22693)
+
+
+Started GET "/properties" for ::1 at 2023-09-06 16:10:30 +0200
+Started GET "/properties" for ::1 at 2023-09-06 16:10:30 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 685)
+
+
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 661)
+
+
+Started POST "/users" for ::1 at 2023-09-06 16:11:19 +0200
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"prue@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"prue@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "prue@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "prue@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-09-06 14:11:20.063763"], ["updated_at", "2023-09-06 14:11:20.063763"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 322ms (Views: 0.2ms | ActiveRecord: 7.9ms | Allocations: 24354)
+
+
+Started GET "/properties" for ::1 at 2023-09-06 16:11:25 +0200
+Started GET "/properties" for ::1 at 2023-09-06 16:11:25 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 659)
+
+
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 661)
+
+
+Started POST "/properties" for ::1 at 2023-09-06 16:21:06 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"manoir", "description"=>"bla", "price"=>"132222", "image"=>"", "zip_code"=>"54547", "city"=>"nuage", "user_id"=>""}}
+[31mUnpermitted parameter: :user_id. Context: { controller: PropertiesController, action: create, request: #<ActionDispatch::Request:0x0000000107038a10>, params: {"property"=>{"title"=>"manoir", "description"=>"bla", "price"=>"132222", "image"=>"", "zip_code"=>"54547", "city"=>"nuage", "user_id"=>""}, "controller"=>"properties", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 51ms (Views: 17.0ms | ActiveRecord: 9.2ms | Allocations: 3525)
+
+
