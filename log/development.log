@@ -4397,3 +4397,484 @@ Processing by PropertiesController#index as */*
 Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.5ms | Allocations: 1663)
 
 
+Started GET "/properties" for ::1 at 2023-09-07 11:47:43 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (1.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 92ms (Views: 47.6ms | ActiveRecord: 15.5ms | Allocations: 37492)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 11:47:44 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms | Allocations: 1665)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-09-07 11:48:08 +0200
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Completed 200 OK in 393ms (Views: 0.6ms | ActiveRecord: 5.9ms | Allocations: 19883)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 11:48:08 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 1662)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 11:48:08 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1663)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 11:54:51 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Test", "description"=>"Créé le 7 septembre", "price"=>"100000", "image"=>"", "zip_code"=>"78710", "city"=>"Mantes"}}
+Completed 422 Unprocessable Entity in 49ms (Views: 7.1ms | ActiveRecord: 13.7ms | Allocations: 8583)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 11:54:54 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.7ms | Allocations: 1821)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 11:54:54 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.5ms | Allocations: 1665)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 11:55:38 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7 sept", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 660)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:00:51 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7 sept", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 10ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 653)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:01:00 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7 sept", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 27ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 649)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:01:06 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7 sept", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 653)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:01:07 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7 sept", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 648)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:01:08 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7 sept", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 39ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 653)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:01:08 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7 sept", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 648)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:01:08 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7 sept", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 44ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 648)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:01:09 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7 sept", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 648)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:01:09 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7 sept", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 5ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 648)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:01:09 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7 sept", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 78ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 648)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:01:09 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7 sept", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 7ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 648)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:01:28 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"GGGGG", "price"=>"1000000", "image"=>"", "zip_code"=>"76558", "city"=>"HHHH"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 648)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 12:10:05 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7", "price"=>"2346", "image"=>"", "zip_code"=>"78710", "city"=>"Rosny", "user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id. Context: { controller: PropertiesController, action: create, request: #<ActionDispatch::Request:0x00007fcba638d758>, params: {"property"=>{"title"=>"Maison", "description"=>"Créé le 7", "price"=>"2346", "image"=>"", "zip_code"=>"78710", "city"=>"Rosny", "user_id"=>"1"}, "controller"=>"properties", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+  [1m[36mProperty Create (24.4ms)[0m  [1m[32mINSERT INTO "properties" ("title", "description", "price", "image", "city", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Maison"], ["description", "Créé le 7"], ["price", "2346.0"], ["image", ""], ["city", "Rosny"], ["zip_code", 78710], ["created_at", "2023-09-07 10:10:05.451408"], ["updated_at", "2023-09-07 10:10:05.451408"]]
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+Completed 201 Created in 91ms (Views: 5.4ms | ActiveRecord: 39.2ms | Allocations: 7815)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:10:07 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (19.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 66ms (Views: 46.8ms | ActiveRecord: 19.2ms | Allocations: 1990)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:10:07 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.3ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:25:13 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (1.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 205ms (Views: 163.4ms | ActiveRecord: 41.5ms | Allocations: 4704)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:25:13 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (10.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 32.5ms | ActiveRecord: 10.5ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:25:54 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (3.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 3.2ms | Allocations: 1800)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:25:54 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (1.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 1.9ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:31:42 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.9ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 30.0ms | ActiveRecord: 17.9ms | Allocations: 4704)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:31:51 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:32:13 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:32:41 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (2.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 2.2ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:32:41 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (8.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 18.8ms | ActiveRecord: 8.3ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:33:17 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (78.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 95ms (Views: 16.8ms | ActiveRecord: 78.0ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:33:17 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (3.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 5.3ms | ActiveRecord: 3.8ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:38:01 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (12.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 91ms (Views: 75.2ms | ActiveRecord: 12.8ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:38:08 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.7ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:38:10 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:38:32 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:38:34 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:38:34 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 1.0ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:38:47 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:38:47 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:40:40 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (1.1ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 1.1ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:40:42 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.4ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:40:43 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:41:13 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:41:13 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:41:16 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:41:23 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:41:28 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.5ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:42:08 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 143ms (Views: 142.4ms | ActiveRecord: 0.6ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:42:08 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (16.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 32ms (Views: 15.3ms | ActiveRecord: 16.3ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:45:54 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:45:54 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (16.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 40ms (Views: 22.7ms | ActiveRecord: 16.8ms | Allocations: 1796)
+
+
+Started GET "/properties/5" for ::1 at 2023-09-07 12:50:44 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"5", "property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 888)
+
+
+Started GET "/properties/5" for ::1 at 2023-09-07 12:50:44 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"5", "property"=>{}}
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 668)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:50:52 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:50:52 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1796)
+
+
+Started GET "/properties/6" for ::1 at 2023-09-07 12:51:55 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"6", "property"=>{}}
+  [1m[36mProperty Load (1.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 668)
+
+
+Started GET "/properties/6" for ::1 at 2023-09-07 12:51:55 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"6", "property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 668)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:51:58 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 1796)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 12:51:58 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 1796)
+
+
