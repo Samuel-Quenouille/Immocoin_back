@@ -1,6 +1,5 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: %i[ show update destroy ]
-  before_action :authorize_property, only: [:update, :destroy]
 
   # GET /properties
   def index
@@ -48,13 +47,5 @@ class PropertiesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def property_params
       params.require(:property).permit(:title, :description, :price, :image, :city, :zip_code, :created_at)
-    end
-
-    def authorize_property
-      #Vérifier si l'utilisateur actuel est autorisé à effectuer l'action
-      unless curent_user.admin? || current_user == @property.user
-        render json: {error: "Vous n'êtes pas autorisé à effectuer cette action." }, status: :forbidden
-      end
-        
     end
 end
