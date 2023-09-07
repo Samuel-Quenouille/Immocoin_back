@@ -4501,3 +4501,544 @@ Processing by PropertiesController#create as */*
 Completed 422 Unprocessable Entity in 51ms (Views: 17.0ms | ActiveRecord: 9.2ms | Allocations: 3525)
 
 
+Started GET "/properties" for ::1 at 2023-09-07 18:30:40 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (19.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 51ms (Views: 2.6ms | ActiveRecord: 24.4ms | Allocations: 19855)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:30:40 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (10.1ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 9.4ms | ActiveRecord: 10.1ms | Allocations: 649)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-09-07 18:32:27 +0200
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 26ms (ActiveRecord: 10.3ms | Allocations: 3339)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+Completed 200 OK in 242ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 18086)
+
+
+Started POST "/users" for ::1 at 2023-09-07 18:33:37 +0200
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.fr"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "sam@sam.fr"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-09-07 16:33:37.846630"], ["updated_at", "2023-09-07 16:33:37.846630"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 227ms (Views: 0.3ms | ActiveRecord: 3.8ms | Allocations: 5417)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-09-07 18:36:24 +0200
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sam@sam.fr"], ["LIMIT", 1]]
+Completed 200 OK in 237ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1695)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:36:25 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.3ms | Allocations: 647)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:36:25 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (19.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 3.7ms | ActiveRecord: 19.0ms | Allocations: 647)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:45:48 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 45ms (Views: 24.3ms | ActiveRecord: 17.7ms | Allocations: 3610)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:45:48 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 648)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 18:49:48 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"A VENDRE LONGNES Superbe longère offrant au RDC grand séjour ,cuisine indépendante grande chambre et salle de bains.A l'étage palier ouvrant sur très belle pièce de 50 m² + 1 chambre avec salle de bains privative.Dépendance ,garage et terrain clos de 600 m² complètent ce bien plein de charme .Un rafraichissement est à prévoir pour ce vrai produit coup de coeur .Il offre de par sa distribution atypique et ses vastes surfaces un magnifique potentiel.\nPrix hors frais notariés, d'enregistrement et de publicité foncière.", "price"=>"291000", "image"=>"", "zip_code"=>"78980", "city"=>"Longnes"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+  [1m[36mProperty Create (1.8ms)[0m  [1m[32mINSERT INTO "properties" ("title", "description", "price", "image", "city", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Maison"], ["description", "A VENDRE LONGNES Superbe longère offrant au RDC grand séjour ,cuisine indépendante grande chambre et salle de bains.A l'étage palier ouvrant sur très belle pièce de 50 m² + 1 chambre avec salle de bains privative.Dépendance ,garage et terrain clos de 600 m² complètent ce bien plein de charme .Un rafraichissement est à prévoir pour ce vrai produit coup de coeur .Il offre de par sa distribution atypique et ses vastes surfaces un magnifique potentiel.\nPrix hors frais notariés, d'enregistrement et de publicité foncière."], ["price", "291000.0"], ["image", ""], ["city", "Longnes"], ["zip_code", 78980], ["created_at", "2023-09-07 16:49:48.416344"], ["updated_at", "2023-09-07 16:49:48.416344"]]
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+Completed 201 Created in 49ms (Views: 1.4ms | ActiveRecord: 18.6ms | Allocations: 17511)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:49:50 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.4ms | Allocations: 822)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:49:50 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.3ms | Allocations: 789)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6566015256337567590)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJwtDenylist (20230905144741)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.3ms)[0m  [1m[35mDROP INDEX  "index_jwt_denylist_on_jti"[0m
+  [1m[35m (8.3ms)[0m  [1m[35mDROP TABLE "jwt_denylist"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230905144741"]]
+  [1m[36mTRANSACTION (20.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6566015256337567590)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6566015256337567590)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20230905144727)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP INDEX  "index_users_on_reset_password_token"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP INDEX  "index_users_on_email"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (1.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230905144727"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6566015256337567590)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6566015256337567590)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProperties (20230905144134)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE "properties"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230905144134"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6566015256337567590)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6566015256337567590)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProperties (20230905144134)
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.6ms)[0m  [1m[35mCREATE TABLE "properties" ("id" bigserial primary key, "title" character varying, "description" text, "price" integer, "image" character varying, "city" character varying, "zip_code" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230905144134"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20230905144727)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230905144727"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJwtDenylist (20230905144741)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "jwt_denylist" ("id" bigserial primary key, "jti" character varying NOT NULL, "exp" timestamp(6) NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE INDEX "index_jwt_denylist_on_jti" ON "jwt_denylist" ("jti")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230905144741"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6566015256337567590)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/properties" for ::1 at 2023-09-07 18:53:05 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 9.3ms | Allocations: 826)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:53:05 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 647)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:53:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (9.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 1.2ms | ActiveRecord: 13.1ms | Allocations: 19836)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:53:42 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (1.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 1.4ms | Allocations: 649)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:54:05 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.6ms | Allocations: 661)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:54:05 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (2.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 2.2ms | Allocations: 647)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 18:54:41 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Maison", "description"=>"A VENDRE LONGNES Superbe longère offrant au RDC grand séjour ,cuisine indépendante grande chambre et salle de bains.A l'étage palier ouvrant sur très belle pièce de 50 m² + 1 chambre avec salle de bains privative.Dépendance ,garage et terrain clos de 600 m² complètent ce bien plein de charme .Un rafraichissement est à prévoir pour ce vrai produit coup de coeur .Il offre de par sa distribution atypique et ses vastes surfaces un magnifique potentiel.\nPrix hors frais notariés, d'enregistrement et de publicité foncière.", "price"=>"291000", "image"=>"", "zip_code"=>"78980", "city"=>"Longnes", "user_id"=>"6"}}
+[31mUnpermitted parameter: :user_id. Context: { controller: PropertiesController, action: create, request: #<ActionDispatch::Request:0x00007fac752ca2f8>, params: {"property"=>{"title"=>"Maison", "description"=>"A VENDRE LONGNES Superbe longère offrant au RDC grand séjour ,cuisine indépendante grande chambre et salle de bains.A l'étage palier ouvrant sur très belle pièce de 50 m² + 1 chambre avec salle de bains privative.Dépendance ,garage et terrain clos de 600 m² complètent ce bien plein de charme .Un rafraichissement est à prévoir pour ce vrai produit coup de coeur .Il offre de par sa distribution atypique et ses vastes surfaces un magnifique potentiel.\nPrix hors frais notariés, d'enregistrement et de publicité foncière.", "price"=>"291000", "image"=>"", "zip_code"=>"78980", "city"=>"Longnes", "user_id"=>"6"}, "controller"=>"properties", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+  [1m[36mProperty Create (0.9ms)[0m  [1m[32mINSERT INTO "properties" ("title", "description", "price", "image", "city", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Maison"], ["description", "A VENDRE LONGNES Superbe longère offrant au RDC grand séjour ,cuisine indépendante grande chambre et salle de bains.A l'étage palier ouvrant sur très belle pièce de 50 m² + 1 chambre avec salle de bains privative.Dépendance ,garage et terrain clos de 600 m² complètent ce bien plein de charme .Un rafraichissement est à prévoir pour ce vrai produit coup de coeur .Il offre de par sa distribution atypique et ses vastes surfaces un magnifique potentiel.\nPrix hors frais notariés, d'enregistrement et de publicité foncière."], ["price", 291000], ["image", ""], ["city", "Longnes"], ["zip_code", 78980], ["created_at", "2023-09-07 16:54:41.363883"], ["updated_at", "2023-09-07 16:54:41.363883"]]
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+Completed 201 Created in 63ms (Views: 2.2ms | ActiveRecord: 8.8ms | Allocations: 20916)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:54:43 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 844)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 18:54:43 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.6ms | Allocations: 778)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 18:54:56 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1512)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 18:54:56 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 658)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 18:58:42 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 659)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 18:58:48 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 659)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 18:58:48 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (1.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 30ms (Views: 0.5ms | ActiveRecord: 1.6ms | Allocations: 659)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 18:58:53 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 19:00:32 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 19:00:36 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 658)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 19:00:40 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-09-07 19:01:04 +0200
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sam@sam.fr"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 32ms (ActiveRecord: 20.6ms | Allocations: 2574)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]"}}}
+Completed 200 OK in 240ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 16456)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users" for ::1 at 2023-09-07 19:02:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.fr"], ["LIMIT", 1]]
+  [1m[36mUser Create (7.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "sam@sam.fr"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-09-07 17:02:44.812388"], ["updated_at", "2023-09-07 17:02:44.812388"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 293ms (Views: 0.4ms | ActiveRecord: 13.6ms | Allocations: 45147)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 19:02:46 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 90ms (Views: 86.9ms | ActiveRecord: 4.5ms | Allocations: 16332)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 19:02:46 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.2ms | Allocations: 779)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 19:02:53 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 936)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 19:02:53 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 658)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-09-07 19:03:08 +0200
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sam@sam.fr"], ["LIMIT", 1]]
+Completed 200 OK in 227ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 2295)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 19:03:08 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.4ms | Allocations: 777)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 19:03:08 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.5ms | Allocations: 778)
+
+
+Started POST "/properties" for ::1 at 2023-09-07 19:05:56 +0200
+Processing by PropertiesController#create as */*
+  Parameters: {"property"=>{"title"=>"Villa", "description"=>"La demeure principale représente 285 m2 env avec en rez-de-jardin : hall d'entrée 24 m2, salle à manger 31 m2, cuisine 17 m2, une chambre avec salle de douche 16 m2, une toilette séparée.\nLe niveau supérieur propose : un très grand salon 75 m2 toit cathédrale pour partie, lumière traversante, cheminée centrale, vue panoramique sur le bief et les 13520 m2 de verdure, accès direct à la grande terrasse. On trouve aussi à ce niveau un bureau/chambre 20 m2, une autre chambre de 20 m2, une salle de bain 10 m2 et une toilette séparée.\nLe dernier étage se compose d'une suite parentale de 50 m2 dont la chambre 25 m2, salle de bain 11 m2, le dressing 13 m2, une toilette séparée et d'un bureau/mezzanine de 19 m2", "price"=>"1700000", "image"=>"", "zip_code"=>"78000", "city"=>"Versailles"}}
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+  [1m[36mProperty Create (9.1ms)[0m  [1m[32mINSERT INTO "properties" ("title", "description", "price", "image", "city", "zip_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Villa"], ["description", "La demeure principale représente 285 m2 env avec en rez-de-jardin : hall d'entrée 24 m2, salle à manger 31 m2, cuisine 17 m2, une chambre avec salle de douche 16 m2, une toilette séparée.\nLe niveau supérieur propose : un très grand salon 75 m2 toit cathédrale pour partie, lumière traversante, cheminée centrale, vue panoramique sur le bief et les 13520 m2 de verdure, accès direct à la grande terrasse. On trouve aussi à ce niveau un bureau/chambre 20 m2, une autre chambre de 20 m2, une salle de bain 10 m2 et une toilette séparée.\nLe dernier étage se compose d'une suite parentale de 50 m2 dont la chambre 25 m2, salle de bain 11 m2, le dressing 13 m2, une toilette séparée et d'un bureau/mezzanine de 19 m2"], ["price", 1700000], ["image", ""], ["city", "Versailles"], ["zip_code", 78000], ["created_at", "2023-09-07 17:05:56.400115"], ["updated_at", "2023-09-07 17:05:56.400115"]]
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:20:in `create'
+Completed 201 Created in 22ms (Views: 0.7ms | ActiveRecord: 12.3ms | Allocations: 2185)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 19:05:58 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 19:05:58 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/properties/2" for ::1 at 2023-09-07 19:06:04 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"2", "property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 658)
+
+
+Started GET "/properties/2" for ::1 at 2023-09-07 19:06:04 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"2", "property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 21ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 658)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 19:06:12 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 19:06:12 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 901)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-09-07 19:06:16 +0200
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"sam@sam.fr", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sam@sam.fr"], ["LIMIT", 1]]
+Completed 200 OK in 228ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 1545)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 19:06:17 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.5ms | Allocations: 900)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 19:06:17 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 901)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 19:06:21 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 659)
+
+
+Started GET "/properties/1" for ::1 at 2023-09-07 19:06:21 +0200
+Processing by PropertiesController#show as */*
+  Parameters: {"id"=>"1", "property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 658)
+
+
+Started DELETE "/properties/1" for ::1 at 2023-09-07 19:06:25 +0200
+Processing by PropertiesController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:38:in `destroy'
+  [1m[36mProperty Destroy (0.4ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/properties_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/properties_controller.rb:38:in `destroy'
+Completed 204 No Content in 8ms (ActiveRecord: 4.2ms | Allocations: 1933)
+
+
+Started DELETE "/properties/1" for ::1 at 2023-09-07 19:06:25 +0200
+Processing by PropertiesController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:44:in `set_property'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms | Allocations: 569)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Property with 'id'=1):
+  
+app/controllers/properties_controller.rb:44:in `set_property'
+Started GET "/properties" for ::1 at 2023-09-07 19:06:27 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 777)
+
+
+Started GET "/properties" for ::1 at 2023-09-07 19:06:27 +0200
+Processing by PropertiesController#index as */*
+  Parameters: {"property"=>{}}
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.8ms | Allocations: 778)
+
+
